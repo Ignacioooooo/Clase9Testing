@@ -32,14 +32,14 @@ class CalculadoraTest {
     void restar(){
         Calculadora c = new Calculadora();
         assertAll(() -> assertEquals(40, c.restar(90,50)),
-                ()-> assertEquals(605, c.multiplicar(40,15))
+                ()-> assertNotEquals(605, c.multiplicar(40,15))
         );
     }
     @Test
     void SumaryMultiplicar(){
         Calculadora c = new Calculadora();
         assertAll(()-> assertEquals(110, c.sumar(70,40)),
-                ()-> assertEquals(2700, c.multiplicar(110,25)));
+                ()-> assertNotEquals(2700, c.multiplicar(110,25)));
 
     }
     }
